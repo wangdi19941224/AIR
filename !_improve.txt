@@ -1,0 +1,2 @@
+增加了用lambda来给rep排序的方法
+将seq的buffer读入从２５６改成了bufferLine

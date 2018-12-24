@@ -1,0 +1,20 @@
+--------------------------------------------------------我是搞笑的环境配置说明～～ -----------------------------------------------------------------
+	首先呢，我们需要一个根目录，用来存储这个程序要用到的数据和外部程序。
+	比如，我们叫他 “/home/ws/zzZyj/MOPSO/”。你当然可以建立自己的根目录，建好以后在parameterSettings.cpp里面改一下rootAddress这个变量就可以啦。
+	接下来呢，在这个根目录下我们要建立5个文件夹，分别叫 “data” “mybin” “refine1” “rosetta_database” 和 “rosetta_source”。
+	恩，后面四个文件夹里放什么就不多说拉，按照套路就可以了。
+	在第一个文件夹data中，我们要再建立4个文件夹，分别叫 “energyFile” “tempFile” “input”“answer”。
+	这几个文件夹是干啥的？让我们一个一个来看。。。
+	第一个energyFile文件夹里头，我们还要建立三个文件夹，分别叫做 “defaultFile” “QUACKoutFile” “tempFile” ，程序运行的中间结果会存在这里面。
+	第二个tempFile别管它，它是打酱油的，你记住要建这个文件夹就行。（程序运行产生的一大堆temp文件会在里头哦）
+	第三个input嘛，就是用来放输入数据的，比如说你的数据都放在dataTest这个文件夹里，那就只要把它复制到input文件夹里头，然后在parameterSettings.cpp改一下inputAddress这个变量就行拉。当然拉，如果你很懒，也可以把放数据的文件夹命名为newInput，这样复制到input文件夹以后就不用再改源程序了，因为这是默认目录。
+	最后一个answer啊，就是用来输出程序运行结果的嘛，每次程序运行完，会在里头产生一个newAnswer文件夹，里头有cost.txt是历次迭代各个粒子的能量值，time.txt记录了程序用时，其他文件都是最后剩下的rep。有一点要记住，运行完以后赶快给newAnswer新取一个好听的名字！要不他会生气的，比如你下次运行的时候罢工，告诉你： 【无法创建目录"/home/ws/zzZyj/MOPSO/data/answer/newAnswer/": 文件已存在】
+
+嗯嗯，这样就配置好啦。让我们来总结一下，总共就是要建立这样几个文件夹——
+1、根目录
+2、根目录下：“data” “mybin” “refine1” “rosetta_database” 和 “rosetta_source”
+3、data下 ： “energyFile” “tempFile” “input”“answer”
+4、energyFile下：“defaultFile” “QUACKoutFile” “tempFile”
+然后呢，改一下parameterSettings.cpp里头的rootAddress和inputAddress，如果输入数据的文件夹叫做newInput，那就只要改rootAddress啦。
+怎么样，是不是炒鸡简单，炒鸡人性化呢哈哈哈哈^_^
+--------------------------------------------------------我是不要脸的分界线^_^----------------------------------------------------------------------------

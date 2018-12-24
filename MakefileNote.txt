@@ -1,0 +1,1 @@
+把Makefile和那一大堆.cpp文件放在一起，运行make即可以编译链接。清空.o文件的命令为 make clear。
